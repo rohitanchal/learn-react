@@ -5,6 +5,7 @@ class User extends Component { //User Component class based
         return (
             <div>
                 <h1>This is the User Class based Component</h1>
+                
             </div>
         )
     }
