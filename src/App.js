@@ -15,7 +15,8 @@ function App() {
 
       <button onClick={() => alert("Hello")}>Click Me</button>
       <div>
-        <button onClick={alertmsg}>Click Me</button>
+        <button onClick={alertmsg}>Click Me</button> {/*called alert without arrow function*/}
+        <button onClick={() => alertmsg()}>Click Me</button> {/*called alert with arrow function*/}
       </div>
     </div>
   );
