@@ -3,12 +3,14 @@ import User from './User';
 import Header from './Header';
 
 function App() {
+
   function alertmsg() {
     alert("function called");
   }
 
   return (
     <div className='App'>
+
       <Header />
       <User />
 
@@ -18,7 +20,10 @@ function App() {
         <button onClick={alertmsg}>Click Me</button> {/*called alert without arrow function*/}
         <button onClick={() => alertmsg()}>Click Me</button> {/*called alert with arrow function*/}
       </div>
+
+     
     </div>
+    
   );
 }
 
