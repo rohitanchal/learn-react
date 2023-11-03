@@ -1,9 +1,9 @@
-import './App.css';
-import User from './User';
-import Header from './Header';
-import Student from './Student';
-import React from 'react';
-import Emp from './Emp';
+import "./App.css";
+import User from "./User";
+import Header from "./Header";
+import Student from "./Student";
+import React, { useState } from "react";
+import Emp from "./Emp";
 
 // function App() {
 
@@ -11,22 +11,22 @@ import Emp from './Emp';
 //     alert("function called");
 //   }
 
-  class App extends React.Component{
-    constructor(){
-      super();
-      this.state={names: " Rahul"};
-    }
+// class App extends React.Component{
+//   constructor(){
+//     super();
+//     this.state={names: " Rahul"};
+//   }
 
-    render()
-    {
-      return(
-        <div className='App' style={{ backgroundColor: "yellow", margin: 30}}>
-          <Emp names={this.state.names} email={"rk@test.com"}/>
-          <button onClick={()=>this.setState({names: " Seema"})}>DATA</button>
-        </div>
-      )
-    }
-  }
+//   render()
+//   {
+//     return(
+//       <div className='App' style={{ backgroundColor: "yellow", margin: 30}}>
+//         <Emp names={this.state.names} email={"rk@test.com"}/>
+//         <button onClick={()=>this.setState({names: " Seema"})}>DATA</button>
+//       </div>
+//     )
+//   }
+// }
 
 //   return (
 //     <div className='App'>
@@ -40,16 +40,40 @@ import Emp from './Emp';
 
 //       <Emp />
 
-
 //       <button onClick={() => alert("Hello")}>Click Me</button><hr />
 //       <div>
 //         <button onClick={alertmsg}>Click Me</button> {/*called alert without arrow function*/}<hr />
 //         <button onClick={() => alertmsg()}>Click Me</button> {/*called alert with arrow function*/}<hr />
 //       </div>
-     
+
 //     </div>
-    
+
 //   );
 // }
+
+// lecture 15 start here
+
+function App() {
+
+  const [data, setData] = useState(null);
+  const [print, setPrint] = useState(false);
+  function getData(val) {
+
+    console.warn(val.target.value);
+    setData(val.target.value);
+    setPrint(false);
+  }
+  return (
+    <div className="App">
+      {
+        print?
+        <h1>{data}</h1>
+        : null
+      }
+      <input type="text" onChange={getData} />
+      <button onClick={()=>setPrint(true)}>Print Data</button>
+    </div>
+  );
+}
 
 export default App;
