@@ -25,8 +25,6 @@ function App() {
         <button onClick={alertmsg}>Click Me</button> {/*called alert without arrow function*/}<hr />
         <button onClick={() => alertmsg()}>Click Me</button> {/*called alert with arrow function*/}<hr />
       </div>
-
-
      
     </div>
     

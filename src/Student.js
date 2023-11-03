@@ -1,7 +1,5 @@
-function Student(props) {
-    //here props called
+function Student(props) {    //here props called
 
-    console.warn(props);
     return (
         <div style={{ backgroundColor: "skyblue", margin: 10 }}>
             <div> 
