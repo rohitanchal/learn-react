@@ -88,7 +88,9 @@ function App() {
         <h1>Hello Lecture 16</h1>
         :null
       }
-      <button onClick={() => setStatus(!status)}>Toggle</button>
+      <button onClick={() => setStatus(false)}>Hide</button>
+      <button onClick={() => setStatus(true)}>Show</button>
+      {/* <button onClick={() => setStatus(!status)}>Toggle</button> */}
     </div>
   )
 }
