@@ -1,9 +1,9 @@
 import "./App.css";
-import User from "./User";
-import Header from "./Header";
-import Student from "./Student";
+// import User from "./User";
+// import Header from "./Header";
+// import Student from "./Student";
 import React, { useState } from "react";
-import Emp from "./Emp";
+// import Emp from "./Emp";
 
 // function App() {
 
@@ -78,21 +78,58 @@ import Emp from "./Emp";
 
 // lecture 16 start here
 
+// function App() {
+
+//   const [status, setStatus] = React.useState(true);
+//   return (
+//     <div className="App">
+//       {
+//         status?
+//         <h1>Hello Lecture 16</h1>
+//         :null
+//       }
+//       {/* <User/> */}
+//       <button onClick={() => setStatus(false)}>Hide</button>
+//       <button onClick={() => setStatus(true)}>Show</button>
+//       {/* <button onClick={() => setStatus(!status)}>Toggle</button> */}
+//     </div>
+//   )
+// }
+
+
+// lecture 17
 function App() {
 
-  const [status, setStatus] = React.useState(true);
+  const [name, setName] = useState("");
+  const [tnc, setTnc] = useState("");
+  const [city, setCity] = useState("false");
+  
+  function getFormData(e){
+    console.log(name,tnc,city);
+    e.preventDefault();
+  }
   return (
     <div className="App">
-      {
-        status?
-        <h1>Hello Lecture 16</h1>
-        :null
-      }
-      <button onClick={() => setStatus(false)}>Hide</button>
-      <button onClick={() => setStatus(true)}>Show</button>
-      {/* <button onClick={() => setStatus(!status)}>Toggle</button> */}
+      <h1> This is My Lecture 17</h1>
+      <hr/>
+
+      <h2>Handle Form in React</h2>
+      
+      <form onSubmit={getFormData}>
+        <input type="text" placeholder="Enter Name " onChange={(e)=>setName(e.target.value)} /><br/><br/>
+      
+        <select onChange={(e)=>setCity(e.target.value)}>
+          <option>select option</option>
+          <option>Lucknow</option>
+          <option>Azangarh</option>
+        </select><br/><br/>
+      
+        <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)} /><span>Accept term and condition</span><br/><br/>
+      
+        <button type="submit">Submit</button>
+        <button>Clear</button>
+      </form>
     </div>
   )
 }
-
 export default App;
