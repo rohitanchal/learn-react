@@ -101,8 +101,8 @@ import React, { useState } from "react";
 function App() {
 
   const [name, setName] = useState("");
-  const [tnc, setTnc] = useState("");
-  const [city, setCity] = useState("false");
+  const [tnc, setTnc] = useState("false");
+  const [city, setCity] = useState("");
   
   function getFormData(e){
     console.log(name,tnc,city);
