@@ -3,6 +3,7 @@ import "./App.css";
 // import Header from "./Header";
 // import Student from "./Student";
 import React, { useState } from "react";
+import Profile from "./Profile";
 // import Emp from "./Emp";
 
 // function App() {
@@ -98,38 +99,50 @@ import React, { useState } from "react";
 
 
 // lecture 17
-function App() {
+// function App() {
 
-  const [name, setName] = useState("");
-  const [tnc, setTnc] = useState("false");
-  const [city, setCity] = useState("");
-  
-  function getFormData(e){
-    console.log(name,tnc,city);
-    e.preventDefault();
-  }
+//   const [name, setName] = useState("");
+//   const [tnc, setTnc] = useState("false");
+//   const [city, setCity] = useState("");
+
+//   function getFormData(e){
+//     console.log(name,tnc,city);
+//     e.preventDefault();
+//   }
+//   return (
+//     <div className="App">
+//       <h1> This is My Lecture 17</h1>
+//       <hr/>
+
+//       <h2>Handle Form in React</h2>
+
+//       <form onSubmit={getFormData}>
+//         <input type="text" placeholder="Enter Name " onChange={(e)=>setName(e.target.value)} /><br/><br/>
+
+//         <select onChange={(e)=>setCity(e.target.value)}>
+//           <option>select option</option>
+//           <option>Lucknow</option>
+//           <option>Azangarh</option>
+//         </select><br/><br/>
+
+//         <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)} /><span>Accept term and condition</span><br/><br/>
+
+//         <button type="submit">Submit</button>
+//         <button>Clear</button>
+//       </form>
+//     </div>
+//   )
+// }
+// export default App;
+
+// lecture 18 
+
+function App() {
   return (
     <div className="App">
-      <h1> This is My Lecture 17</h1>
-      <hr/>
-
-      <h2>Handle Form in React</h2>
-      
-      <form onSubmit={getFormData}>
-        <input type="text" placeholder="Enter Name " onChange={(e)=>setName(e.target.value)} /><br/><br/>
-      
-        <select onChange={(e)=>setCity(e.target.value)}>
-          <option>select option</option>
-          <option>Lucknow</option>
-          <option>Azangarh</option>
-        </select><br/><br/>
-      
-        <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)} /><span>Accept term and condition</span><br/><br/>
-      
-        <button type="submit">Submit</button>
-        <button>Clear</button>
-      </form>
+      <Profile/>
     </div>
   )
 }
+
 export default App;
