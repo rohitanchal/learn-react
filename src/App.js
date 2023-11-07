@@ -4,6 +4,7 @@ import "./App.css";
 // import Student from "./Student";
 import React, { useState } from "react";
 import Profile from "./Profile";
+import Render from "./Render"
 // import Emp from "./Emp";
 
 // function App() {
@@ -141,6 +142,7 @@ function App() {
   return (
     <div className="App">
       <Profile/>
+      <Render />
     </div>
   )
 }
